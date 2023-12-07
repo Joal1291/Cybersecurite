@@ -23,10 +23,9 @@ Si vous avez des suggestions d'améliorations, des corrections ou si vous souhai
 ## Ressources Utiles
 
 <p align="center">
-        <a href="https://www.hackthebox.eu/">
+       <a href="https://www.hackthebox.eu/">
             <img src="https://github.com/Joal1291/Cybersecurit-/assets/144683460/e9ffd495-d8e3-4729-bf2d-21691377d21e" alt="hackthebox" width="150">
         </a>
-  --
         <a href="https://tryhackme.com/">
             <img src="https://github.com/Joal1291/Cybersecurit-/assets/144683460/d0b1f022-310d-4b6d-8d23-5d4a6cd981b3" width="250">
         </a>
