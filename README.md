@@ -21,13 +21,16 @@ Bienvenue sur mon repository dédié à mon apprentissage de la cybersécurité 
 Si vous avez des suggestions d'améliorations, des corrections ou si vous souhaitez ajouter vos propres contributions, n'hésitez pas à ouvrir une issue ou une pull request. La collaboration est la clé pour apprendre et progresser dans le domaine de la cybersécurité.
 
 ## Ressources Utiles
+
 <p align="center">
         <a href="https://www.hackthebox.eu/">
-            <img src="" alt="Description de l'image">
+            <img src="https://github.com/Joal1291/Cybersecurit-/assets/144683460/e9ffd495-d8e3-4729-bf2d-21691377d21e" alt="hackthebox" width="150">
         </a>
-    </p>
-- [Hack The Box](https://www.hackthebox.eu/)
-- [Try Hack Me](https://tryhackme.com/)
+  --
+        <a href="https://tryhackme.com/">
+            <img src="https://github.com/Joal1291/Cybersecurit-/assets/144683460/d0b1f022-310d-4b6d-8d23-5d4a6cd981b3" width="250">
+        </a>
+  </p>
 
 ## Avertissement
 
