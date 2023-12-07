@@ -22,7 +22,7 @@ Si vous avez des suggestions d'améliorations, des corrections ou si vous souhai
 
 ## Ressources Utiles
 <p align="center">
-        <a href="https://example.com">
+        <a href="https://www.hackthebox.eu/">
             <img src="" alt="Description de l'image">
         </a>
     </p>
