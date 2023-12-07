@@ -5,7 +5,7 @@
 For the first one, do a simple nmap to scan all the ports and see how many tcp port are open. 
 
 ```bash
-nmap -sV -SV [ip]
+nmap -sV -sC [IP]
 ```
 
 Then after interpreting the shema we can see that there is only two ports open.
@@ -17,7 +17,7 @@ Then after interpreting the shema we can see that there is only two ports open.
 For this one we just need to go to the search bar of mozilla or any navigator and type, and navigate to the contact page and get the domaine of the email adress we can see on it.
 
 ```bash
-http://[ip]
+http://[IP]
 
 ```
 ---
@@ -35,7 +35,7 @@ You can choose to directly type the ip adresse we need to go to and the domaine 
 or there is a fastest way to do it.
 
 ```bash
-echo "10.129.227.248 thetoppers.htb" | sudo tee -a /etc/hosts
+echo "[IP] [domain.domain]" | sudo tee -a /etc/hosts
 ```
 
 echo        -- de l'entrer a inserer dans le fichier <br/>
