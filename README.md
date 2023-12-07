@@ -10,7 +10,7 @@ Bienvenue sur mon repository dédié à mon apprentissage de la cybersécurité 
   - Ce répertoire contient les informations relatives aux machines résolues sur la plateforme Hack The Box.
   - Chaque sous-dossier est dédié à une machine spécifique et contient les fichiers liés à la résolution.
     - `notes.md` : Des notes personnelles sur la machine.
-    - `exploit.py` : Le code source de l'exploit utilisé.
+     - `captures/` : Captures d'écran pertinentes.
     - `writeup.md` : Un guide étape par étape sur la résolution de la machine.
 
 - **tryhackme/**
