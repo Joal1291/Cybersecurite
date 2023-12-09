@@ -42,8 +42,8 @@ Une petite recherche sur google avec la bonne question te donne la réponse!! Le
 ---
 ## Task 5
 
-Aprés avoir trouver le fameux `myssqlclient.py` je me suis mis a rechercher un moyen de l'utiliser je suis tomber sur un tuto trés intéréssant qui ma donné le lien d'un git hub pour `impacket` sur le quelle j'ai pu voir la procédure d'instalation de celui-ci.
-
+Aprés avoir trouver le fameux `myssqlclient.py` je me suis mis a rechercher un moyen de l'utiliser je suis tomber sur un tuto trés intéréssant qui ma donné le lien d'un git hub pour `impacket` sur le quelle j'ai pu voir la procédure d'instalation de celui-ci.<br/>
+<br/>
 Afin de pouvoir me connecter au serveur sql une commande ma était fourni. On fait appel au script que l'on veut executer puis on entre l'id de l'utilisateur trouver lors de la manip précédente suivi d'un @ et de l'adresse IP cible, enfin on termine avec `-windows-auth` qui permet de préciser que c'est sur un serveur miscrosoft que nous allons nous connecter.
 
 ```bash
@@ -55,7 +55,30 @@ Une fois connecter a l'intérieur un `help` m'a ppermis de voir les commande dis
 ---
 ## Task 6
 
+Il y a un script qui peut nous permettre d'escalader les privilege sur un hote windows est celui ci est `WinPeas`
+
+---
+## Task 7
+
+Avant toute chose nous allons reconfigurer la command xp_cmdshell pour pouvoir pour pouvoir faire des commande d'excution windows shell.<br/>
+<br/>
+Pour ce faire nous allons commencer avec `EXEC xp_cmdshell "net user"` pour voir si la commande est activer.<br/>
+Dans ce cas elle ne l'est pas.<br/>
+<br/>
+Nous allons donc faire en sorte quelle soit disponible. <br/>
+Nous allons commencer par taper la commande `EXEC sp_configure "show advanced options", 1;`, 1 pour true afin qu'elle s'affiche.<br/>
+On continue avec `Reconfigure;` pour que cela soit pris en compte.<br/>
+On peut les afficher pour verifier que ce la a bien était fait. Avec `sp_configure;`<br/>
+Puis on termine avec `EXEC sp_configure 'xp_cmdshell', 1;`, on choisit la commande a reconfigurer puis on a la passe a 1 (true).<br/>
+Et on termine avec un `RECONFIGURE;`, pour la pise en compte. <br/>
+<br/>
+Nous somme maintenant capable d'effetuer des command system. <br/>
+<br/>
 
 
+J'ai decouvert une façons bien plus simple qui consiste a, aprés avoir fais le `help`, <br/>
+Il faut faire un `enable_xp_cmdshell`, <br/>
+Puis un `RECONFIGURE`, ce qui vas passer le 0 false a 1 True et la commande sera donc accéssible. <br/>
+<br/>
 
 
