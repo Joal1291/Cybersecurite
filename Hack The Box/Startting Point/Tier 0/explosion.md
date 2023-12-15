@@ -44,5 +44,6 @@ Let's get connected to the target with:
 ```bash
 xfreerdp /u:administrator /v:[adresse ip of the target]
 ```
+if u need so u can use another one flag! `/cert:ignore : Specifies to the scrips that all security certificate usage should be ignored.`
 
 And here it is we are connected to a graphycal interface where we can find the flag.txt!  
