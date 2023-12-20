@@ -1,9 +1,5 @@
 # KEEPER
 
-# Intro
-
-For this one I'll do it with a walktrough in purpose to learn more about things.<br/>
-
 # Processus
 
 So first thing first we will do an nmap and try to visit the ip on a navigator.<br/><br/>
