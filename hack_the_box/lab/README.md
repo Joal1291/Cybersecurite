@@ -1,23 +1,8 @@
 # Boxs
 
-## Starting Point
+Les dossiers `machines` et `starting points` contiennent les notes que j'ai prises durant la réalisation des boxes.<br/>
 
-### Tier 0
+Les Machines sont des boxes sans aide. Si celle-ci est retirée, une aide est disponible. Si j'en ai eu besoin, cela sera précisé en début de notes.<br/>
 
- - [Explosion](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%200/explosion.md)
- - [MongoDB](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%200/mongod.md)
- - [Preignition](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%200/preignition.md)
- - [Synced](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%200/synced.md)
+Les Starting Points sont des boxes d'apprentissage, sur lesquelles nous sommes guidés pour découvrir de nouvelles choses.
 
-### Tier 1
-
- - [Bike](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%201/bike.md)
- - [Ignition](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%201/ignition.md)
- - [Responder](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%201/responder.md)
-
-### Tier 2 
-
- - [Archetype](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%202/archetype.md)
- - [Oopsie](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%202/oopsie.md)
- - [Unified](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%202/unified.md)
- - [Vaccine](https://github.com/Joal1291/Cybersecurite/blob/main/hack_the_box/lab/starting_point/Tier%202/vaccine.md)
