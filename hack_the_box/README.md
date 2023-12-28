@@ -1,4 +1,4 @@
-# Documentation Hack The Box
+# Hack The Box
 
 Ce répertoire contient des ressources en lien avec les plateformes Hack The Box Academy et Hack The Box Lab. Voici une brève description de la structure du dossier :
 
