@@ -7,14 +7,11 @@ Bienvenue sur mon repository dédié à mon apprentissage de la cybersécurité 
 ## Structure du Repository
 
 - **hackthebox/**
-  - Ce répertoire contient les informations relatives aux machines résolues sur la plateforme Hack The Box.
-  - Chaque sous-dossier est dédié à une machine spécifique et contient les fichiers liés à la résolution.
-    - `notes.md` : Des notes personnelles sur la machine.
-     - `captures/` : Captures d'écran pertinentes.
-    - `writeup.md` : Un guide étape par étape sur la résolution de la machine.
+  - Ce répertoire contient les informations relatives aux machines résolues sur la plateforme Hack The Box Lab, et au cours suivis sur Hack the Box Academy.
+  - Chaque sous dossier contient un README pour plus d'information.
 
 - **tryhackme/**
-  - Ce répertoire suit la même structure que `hackthebox/`, mais pour les machines résolues sur Try Hack Me.
+  - Ce répertoire suit la même structure que `hackthebox/`.
 
 ## Contribution
 
@@ -31,7 +28,7 @@ Si vous avez des suggestions d'améliorations, des corrections ou si vous souhai
         </a>
   </p>
 
-## Avertissement
+## Avertissement :) 
 
 Ces activités doivent être entreprises de manière éthique et légale. Respectez toujours les conditions d'utilisation des plateformes, et assurez-vous d'avoir l'autorisation explicite de tester la sécurité des systèmes avant de le faire.
 
