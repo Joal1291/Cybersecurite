@@ -26,7 +26,7 @@ Je lance un gobuster de directory et de subdomain:
 ```bash
 gobuster dir --url http://devvortex.htb -w /usr/share/wordlist/dirbuster/directory-list-2.3-small.txt
 
-gpbuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://thetoppers.htb --append-domain
+gpbuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://devvortex.htb --append-domain
 ```
 
 Je tombe sur un subdomains et quelque directory.<br/>
@@ -41,4 +41,4 @@ Je trouve un directory trés intéréssant le `/administrator`<br/>
 
 En me rendant sur le site je vois que j'ai acces a une page de login! régis par `joomla`.<br/><br/>
 
-En quelque recherche je trouve des info qui me permettent de decouvrir que je vais pouvoir essayer un brute force du login admin. Je tente quelque recherche sur les directory suivant et tomber sur un path qui me permet de decouvrir quelque info sur joomla la version 
+En quelque recherche je trouve des info qui me permettent de decouvrir que je vais pouvoir essayer un brute force du login admin. Je tente quelque recherche sur les directory suivant et tomber sur un path qui me permet de decouvrir quelque info sur joomla, nottament la version. 
