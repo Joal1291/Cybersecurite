@@ -31,7 +31,7 @@ gpbuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.
 
 Je tombe sur un subdomains et quelque directory.<br/>
 
-Je vais essayer de voir si je peut exploiter quelque chose.<br/>
+Je vais essayer de voir si je peut exploiter quelque chose. Surtout sur le subdomain: `dev.devvortex.htb`<br/>
 
 En rentrant le subdomain dans le /etc/hosts je tombe sur un nouveau site!<br/>
 
