@@ -47,4 +47,4 @@ smbclient -L 10.10.221.209 -U svc-admin
 
 Mais rien n-y fait le mot de passe ne fonctionne pas je ne sais pas du tout quoi faire...!
 
-Aprés un coup d'oeuil à la soluce c'est bien ce qu'il falliat trouver et faire donc je ne comprend pas pourquoi cela ne fonctionne pas.
+Aprés un coup d'oeuil à la soluce c'est bien ce qu'il falliat trouver et faire, donc je ne comprend pas pourquoi cela ne fonctionne pas.

@@ -41,4 +41,30 @@ Je trouve un directory trés intéréssant le `/administrator`<br/>
 
 En me rendant sur le site je vois que j'ai acces a une page de login! régis par `joomla`.<br/><br/>
 
-En quelque recherche je trouve des info qui me permettent de decouvrir que je vais pouvoir essayer un brute force du login admin. Je tente quelque recherche sur les directory suivant et tomber sur un path qui me permet de decouvrir quelque info sur joomla, nottament la version. 
+En quelque recherche je trouve des info qui me permettent de decouvrir que je vais pouvoir essayer un brute force du login admin. Je tente quelque recherche sur les directory suivant et tomber sur un path qui me permet de decouvrir quelque info sur joomla, nottament la version.
+
+`Joomla/API1.0`
+
+Mais rien en essayant de faire un brute force je vois que chaque demande retourne un code 200 j'en conclus qu'il y a une protection contre le brute force.
+
+Je test une petite recherche sur les cve en tapant `jommla cve-2023`
+Et je tombe sur une cve voyons voir si cela peut donner un résultat! La cve est la `2023-23752`.
+Celle permettrait d'obtenir des information sur la base de donné. Je trouve une exploit [source](https://github.com/ThatNotEasy/CVE-2023-23752) testons voir si quelque chose en ressort! 
+
+Aprés les quelque test j'obtiens des information:
+```bash
+[+] http://dev.devvortex.htb
+Database Type     : mysqli
+Database Prefix   : sd4fg_
+Hostname          : localhost
+Database          : joomla
+Username          : lewis
+Password          : ********************
+```
+
+Information intéréssante mais vais-je en tirer quelque chose... 
+
+Essayons une connection a la base de donnée.<br/>
+
+Ok chaud!! 
+En faite non je suis stupide j'ai tout essayer sans avoir essayer de me connecter a la page login que j'ai trouver durant la recherche de directory sur l'adresse avec le subdomain... du coup je suis enfin connecter a la bae de données.
