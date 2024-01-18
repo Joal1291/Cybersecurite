@@ -84,3 +84,5 @@ On ne sait jamais avant de ce lancer dans une recherche interminable.🤞
 
 Beaucoup de chose a analyser apparaissent c'est parti pour la recherche.<br/>
 
+Note: Zoneminder est un logiciel de video surveillance, opensource.<br/>
+voyons si l'on peut faire quelque chose avec ça.
