@@ -3,7 +3,7 @@
 ## Process
 
 On est lancer sur une adresse ip sur la quelle on a accés a un site web.
-Aprés un `dirsearch` sur le domaine de la machines. On tombe sur un directory qui pourra nous etre utils: `/administrator/login`
+Aprés un `dirsearch` sur le domaine de la machines. On tombe sur un directory qui pourra nous etre utils: `/admin/login`
 
 Une fois rajouter l'extension au domaine on tombe sur une page login sur la quelle on peut lire `craft CMS`.
 
