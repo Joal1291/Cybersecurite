@@ -13,6 +13,9 @@ Bienvenue sur mon repository dédié à mon apprentissage de la cybersécurité 
 - **tryhackme/**
   - Ce répertoire suit la même structure que `hackthebox/`.
 
+- **Notes/**
+  - Ce répertoire contients des notes sur les outils que j'ai pu utiliser.
+
 ## Contribution
 
 Si vous avez des suggestions d'améliorations, des corrections ou si vous souhaitez ajouter vos propres contributions, n'hésitez pas à ouvrir une issue ou une pull request. La collaboration est la clé pour apprendre et progresser dans le domaine de la cybersécurité.
